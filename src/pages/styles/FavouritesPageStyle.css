@@ -1,0 +1,51 @@
+.user-container, .repo-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 600px;
+    padding: 15px;
+
+    border: 2px solid black;
+    margin: 20px 0;
+}
+.user-container a,  .repo-container a{
+    text-decoration: none;
+    font-size: 25px;
+    color: black;
+}
+.user-container a:hover, .repo-container a:hover{
+    text-decoration: underline;
+    color: red;
+}
+ul{
+    border: 1px solid black;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    cursor: pointer;
+    max-height: 200px;
+    overflow-y: auto;
+}
+ul li{
+    font-size: 20px;
+    padding: 5px;
+}
+ul li:hover{
+    background-color: rgb(154, 154, 154);
+}
+.usersPage-wrapper{
+    margin: 0 auto;
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    align-items: left;
+    justify-content: center;
+    flex-direction: column;
+}
+.usersPage-wrapper input{
+    font-size: 40px;
+    padding: 5px;
+    border: 2px solid black;
+    margin-top: 20px;
+}
