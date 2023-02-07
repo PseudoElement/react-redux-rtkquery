@@ -3,14 +3,22 @@ import { useSearchUsersQuery } from "../store/github/github.api";
 import "./styles/HomePageStyle.css";
 
 const HomePage = () => {
+  const [isMobile, setIsMobile] = React.useState(false);
+
   
+  React.useEffect(() => {
+    window.innerWidth < 768 ? setIsMobile(true) : setIsMobile(false);
+    window.addEventListener("resize", () => {
+      window.innerWidth < 768 ? setIsMobile(true) : setIsMobile(false);
+    });
+  }, []);
 
   return (
     <>
       <div className="jumbotron">
         <div className="container">
           <div className="main">
-            <h1>We are Broadway</h1>
+            <h1>{isMobile ? "MOBILE" : "WE ARE BROADWAY"}</h1>
             <a className="btn-main" href="#">
               Get Started
             </a>

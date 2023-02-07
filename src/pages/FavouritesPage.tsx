@@ -11,6 +11,8 @@ import useUser from "../hooks/getUser";
 import User from "../components/User";
 
 const FavouritesPage = () => {
+  const [state, setState] = React.useState(30440);
+  console.log((setState));
   const [search, setSearch] = React.useState<string>("");
   const debounced = useDebounce(search);
   const { isLoading, isError, data } = useSearchUsersQuery(debounced, {
